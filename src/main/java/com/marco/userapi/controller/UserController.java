@@ -1,7 +1,6 @@
 package com.marco.userapi.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,11 +29,13 @@ public class UserController {
 	    return usrService.getUsers();
 	}
 	
-	@RequestMapping(value="/users/{usrId}", method=RequestMethod.GET)
-	public Optional<User> getUser(@PathVariable(value = "usrId") Long id) {
-	    return usrService.getUser(id);
-	}
 
+	
+	@RequestMapping(value="/users/{email}", method=RequestMethod.GET)
+	public User usrByEmail(@PathVariable(value = "email") String email) {
+	    return usrService.getUserByEmail(email);
+	}
+	
 
 	@RequestMapping(value="/users/{usrId}", method=RequestMethod.PUT)
 	public User readUser(@PathVariable(value = "usrId") Long id, @RequestBody User usrDetails) {

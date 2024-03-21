@@ -1,7 +1,6 @@
 package com.marco.userapi.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,9 +24,9 @@ public class UserService {
          return usrRepository.findAll();
         }
         
-        //GET SINGLE
-        public Optional<User> getUser(Long usrId) {
-        	return usrRepository.findById(usrId);
+        
+        public User getUserByEmail(String email) {
+        	return usrRepository.findByEmail(email);
         }
 
         //DELETE
