@@ -34,7 +34,7 @@ steps:
     acrUsername: '$(registryname)'
     acrPassword: '$(registrypass)'
     containerAppName: '$(containername)'
-    resourceGroup: 'SpringWebRG'
+    resourceGroup: 'platformRG'
     dockerfilePath: ''
     containerAppEnvironment: '$(containerenv)'
     targetPort: '8080'
