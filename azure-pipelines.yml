@@ -34,9 +34,12 @@ steps:
     acrUsername: '$(registryname)'
     acrPassword: '$(registrypass)'
     containerAppName: '$(containername)'
+    imageToBuild: 'registrymarco.azurecr.io/userapi:latest'
     resourceGroup: 'platformRG'
     dockerfilePath: ''
     containerAppEnvironment: '$(containerenv)'
     targetPort: '8080'
     ingress: 'external'
+
+
 
