@@ -33,7 +33,9 @@ public class UserController {
 	
 	@RequestMapping(value="/users/{email}", method=RequestMethod.GET)
 	public User usrByEmail(@PathVariable(value = "email") String email) {
+		System.out.println("Richiesta al DB effettuata correttamente");
 	    return usrService.getUserByEmail(email);
+		System.out.println(usrService.getUserByEmail(email));
 	}
 	
 
